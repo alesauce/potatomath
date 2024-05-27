@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "quick-start"
+name = "potatomath"
 version = "0.1.0"
