@@ -64,6 +64,7 @@
         # artifacts from above.
         my-crate = craneLib.buildPackage (commonArgs // {
           inherit cargoArtifacts;
+          doNotSign = true;
         });
       in
       {
