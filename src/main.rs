@@ -1,6 +1,6 @@
-use std::io;
 use rust_decimal::prelude::*;
 use rust_decimal_macros::dec;
+use std::io;
 
 fn main() {
     println!("Welcome to Potatomath!");
@@ -42,8 +42,10 @@ fn calculate_required_bags_of_potatoes(people: i32) -> i32 {
     // Approx. 15 servings per bag of potatoes, 110 calories per serving. Source:
     // https://web.archive.org/web/20240529023336/https://www.walmart.com/ip/Fresh-Whole-Russet-Potatoes-5lb-bag/10447837
     let calories_per_bag_of_potatoes = dec!(1650);
-    let total_bags_required = (total_calories_required/calories_per_bag_of_potatoes).ceil();
-    total_bags_required.to_i32().expect("Unable to convert calculated bags required to i32.")
+    let total_bags_required = (total_calories_required / calories_per_bag_of_potatoes).ceil();
+    total_bags_required
+        .to_i32()
+        .expect("Unable to convert calculated bags required to i32.")
 }
 
 #[cfg(test)]
