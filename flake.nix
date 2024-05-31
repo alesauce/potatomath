@@ -1,5 +1,5 @@
 {
-  description = "Build a cargo project";
+  description = "Flake for potatomath project";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -64,6 +64,7 @@
         # artifacts from above.
         my-crate = craneLib.buildPackage (commonArgs // {
           inherit cargoArtifacts;
+          doNotSign = true;
         });
       in
       {
