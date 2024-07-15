@@ -47,6 +47,12 @@ fn calculate_total_cost(total_bags_required: Decimal) -> Decimal {
     cost_potatoes * total_bags_required
 }
 
+struct FoodItem {
+    name: String,
+    cost_per_kilo: Decimal,
+    calories_per_kilo: Decimal,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
