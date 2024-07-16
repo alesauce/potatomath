@@ -53,6 +53,12 @@ struct FoodItem {
     calories_per_kilo: Decimal,
 }
 
+const POTATOES: FoodItem = FoodItem {
+    name: String::from("potatoes"),
+    cost_per_kilo: dec!(2.47),
+    calories_per_kilo: dec!(770)
+};
+
 #[cfg(test)]
 mod tests {
     use super::*;
